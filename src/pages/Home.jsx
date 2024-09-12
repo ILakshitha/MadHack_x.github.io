@@ -1,6 +1,8 @@
 import React, { useRef } from 'react';
 import Carou from '../components/Carou';
 import Header from '../components/Header';
+import madhack from '../assets/Madhacklogo.svg';
+import { Box } from '@mui/material';
 
 export default function Home() {
   const homeref = useRef(null);
@@ -10,7 +12,7 @@ export default function Home() {
   const faqref = useRef(null);
 
   const scrollToSection = (section) => {
-    switch(section) {
+    switch (section) {
       case 'Home': // Ensure this matches the section names used in Header
         homeref.current.scrollIntoView({ behavior: 'smooth' });
         break;
@@ -33,13 +35,38 @@ export default function Home() {
 
   return (
     <div style={{ textAlign: 'center' }}>
-       <Header scrollToSection={scrollToSection} />
+      <Header scrollToSection={scrollToSection} />
       <h1>Scroll to Component</h1>
-      <div ref={homeref} style={{ height: '1000px', backgroundColor: 'red' }}>Home Section</div>
-      <div ref={aboutref} style={{ height: '1000px', backgroundColor: 'blue' }}>About Section</div>
-      <div ref={timelineref} style={{ height: '1000px', backgroundColor: 'purple' }}>Timeline Section</div> {/* Added missing timeline section */}
-      <div ref={prizeref} style={{ height: '1000px', backgroundColor: 'yellow' }}>Prizes Section</div>
-      <div ref={faqref} style={{ height: '1000px', backgroundColor: 'green' }}>FAQ Section</div>
+      <section ref={homeref} style={{ height: '840px', backgroundColor: '#050A30', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+
+        <div style={{
+          alignItems: 'center',
+
+        }}>
+          <Box
+            sx={{
+
+              width: 600,
+              height: 600,
+              borderRadius: 100,
+              bgcolor: '#0f1e64',
+              backgroundImage: `url(${madhack})`, // Add your image URL here
+              backgroundSize: '500px', // Ensures the image covers the entire box
+              backgroundPosition: 'center',
+              backgroundRepeat: 'no-repeat',
+              '&:hover': {
+                bgcolor: '#191970',
+              },
+            }}
+          />
+
+        </div>
+
+      </section>
+      <div ref={aboutref} style={{ height: '840px', backgroundColor: 'blue' }}>About Section</div>
+      <div ref={timelineref} style={{ height: '840px', backgroundColor: 'purple' }}>Timeline Section</div> {/* Added missing timeline section */}
+      <div ref={prizeref} style={{ height: '840px', backgroundColor: 'yellow' }}>Prizes Section</div>
+      <div ref={faqref} style={{ height: '840px', backgroundColor: 'green' }}>FAQ Section</div>
     </div>
   );
 }
