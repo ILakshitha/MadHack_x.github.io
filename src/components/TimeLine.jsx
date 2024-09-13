@@ -1,6 +1,7 @@
 import React from 'react';
 import { Timeline, TimelineItem, TimelineSeparator, TimelineConnector, TimelineContent, TimelineDot, TimelineOppositeContent } from '@mui/lab';
-import { Typography } from '@mui/material';
+import { CardContent, Typography } from '@mui/material';
+import { Card } from '@mui/material';
 
 const events = [
   { date: "Jan 6th", title: "Awareness Session", location: "Virtual" },
@@ -15,37 +16,32 @@ const events = [
 
 const MadeHackTimeline = () => {
   return (
-    <Timeline position="">
+    <Timeline position="alternate">
       {events.map((event, index) => (
         <TimelineItem key={index}>
-          <TimelineOppositeContent>
-            <Typography variant="body2" color="white" sx={{width: '300px',padding: '20px',
-              background: 'linear-gradient(135deg, #2a5298, #1e3c72)',
-              position: 'relative',
-              
-            
-
-            }}>
-              {event.date}
-            </Typography>
-          </TimelineOppositeContent>
           <TimelineSeparator>
-            <TimelineDot color="primary" />
+            <TimelineDot />
             {index < events.length - 1 && <TimelineConnector />}
           </TimelineSeparator>
           <TimelineContent>
-            <Typography variant="h6" component="div" color="white" 
-            sx={{width: '300px',padding: '20px',
-              background: 'linear-gradient(135deg, #2a5298, #1e3c72)',
-              position: 'relative',}}
+            <Card
+              sx={{
+                background: 'linear-gradient(to right, #3a4c79, #2d6acb)',
+                color: 'white',
+                borderRadius: '10px',
+              }}
             >
-              {event.title}
-            </Typography>
-            <Typography color="white">{event.location}</Typography>
+              <CardContent>
+                <Typography variant="h6">{event.title}</Typography>
+                <Typography variant="subtitle2">{event.location}</Typography>
+                <Typography variant="caption">{event.date}</Typography>
+              </CardContent>
+            </Card>
           </TimelineContent>
         </TimelineItem>
       ))}
     </Timeline>
+      
   );
 };
 

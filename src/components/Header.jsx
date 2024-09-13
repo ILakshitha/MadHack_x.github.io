@@ -41,7 +41,7 @@ export default function Header({ scrollToSection }) {
                 
               ))}
             </Box>
-            <span class="d-block mb-3 caption aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">By IEEE Student Branch of UCSC</span>
+            
           </Toolbar>
         </Container>
       </AppBar>
