@@ -65,6 +65,17 @@ export default function Home() {
         
       </section>
       <div ref={aboutref} style={{ height: '840px', backgroundColor: '#050A30' }}>
+      <div  style={{width:'full', textAlign: 'center'}}>
+        <Typography color='white'
+         sx={{ 
+          fontSize: '50px',    // Set font size
+          fontFamily: 'Times new roman'  // Set font family
+        }}
+        >
+          Intrduction
+
+        </Typography>
+        </div>
       </div>
       <div ref={timelineref} style={{  backgroundColor: '#050A30' }}>
         <div  style={{width:'full', textAlign: 'center'}}>
