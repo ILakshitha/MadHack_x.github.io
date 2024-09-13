@@ -3,6 +3,8 @@ import Carou from '../components/Carou';
 import Header from '../components/Header';
 import madhack from '../assets/Madhacklogo.svg';
 import { Box } from '@mui/material';
+import Timeline from '../components/TimeLine';
+import MadeHackTimeline from '../components/TimeLine';
 
 export default function Home() {
   const homeref = useRef(null);
@@ -36,7 +38,6 @@ export default function Home() {
   return (
     <div style={{ textAlign: 'center' }}>
       <Header scrollToSection={scrollToSection} />
-      <h1>Scroll to Component</h1>
       <section ref={homeref} style={{ height: '840px', backgroundColor: '#050A30', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
 
         <div style={{
@@ -63,8 +64,14 @@ export default function Home() {
         </div>
 
       </section>
-      <div ref={aboutref} style={{ height: '840px', backgroundColor: 'blue' }}>About Section</div>
-      <div ref={timelineref} style={{ height: '840px', backgroundColor: 'purple' }}>Timeline Section</div> {/* Added missing timeline section */}
+      <div ref={aboutref} style={{ height: '840px', backgroundColor: '#050A30' }}>
+      
+
+      </div>
+      <div ref={timelineref} style={{ height: '840px', backgroundColor: 'purple' }}>
+      <MadeHackTimeline/>
+        
+        </div> {/* Added missing timeline section */}
       <div ref={prizeref} style={{ height: '840px', backgroundColor: 'yellow' }}>Prizes Section</div>
       <div ref={faqref} style={{ height: '840px', backgroundColor: 'green' }}>FAQ Section</div>
     </div>

@@ -19,7 +19,7 @@ export default function Header({ scrollToSection }) {
 
   return (
     <div>
-      <AppBar position="fixed" sx={{ backgroundColor: 'black' }}>
+      <AppBar position="" sx={{ backgroundColor: '#030b5e' }}>
         <Container maxWidth="xl">
           <Toolbar disableGutters>
             <img src={madhack} alt='madhack' style={{ width: '200px', height: '100px' }} />
@@ -38,8 +38,10 @@ export default function Header({ scrollToSection }) {
                 >
                   {page}
                 </Button>
+                
               ))}
             </Box>
+            <span class="d-block mb-3 caption aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">By IEEE Student Branch of UCSC</span>
           </Toolbar>
         </Container>
       </AppBar>
