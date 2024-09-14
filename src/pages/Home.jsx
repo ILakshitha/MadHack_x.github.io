@@ -2,9 +2,11 @@ import React, { useRef } from 'react';
 import Carou from '../components/Carou';
 import Header from '../components/Header';
 import madhack from '../assets/Madhacklogo.svg';
+
 import { Box, Typography } from '@mui/material';
 import Timeline from '../components/TimeLine';
 import MadeHackTimeline from '../components/TimeLine';
+import About from '../components/About';
 
 export default function Home() {
   const homeref = useRef(null);
@@ -41,9 +43,10 @@ export default function Home() {
       <section ref={homeref} style={{ height: '840px', backgroundColor: '#050A30', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
 
         <div style={{
-          alignItems: 'center',
-
+         display:'flex',
+         alignItems:'center'
         }}>
+         
           <Box
             sx={{
 
@@ -60,6 +63,7 @@ export default function Home() {
               },
             }}
           />
+          
 
         </div>
         
@@ -68,13 +72,14 @@ export default function Home() {
       <div  style={{width:'full', textAlign: 'center'}}>
         <Typography color='white'
          sx={{ 
-          fontSize: '50px',    // Set font size
+          fontSize: '60px',    // Set font size
           fontFamily: 'Times new roman'  // Set font family
         }}
         >
           Intrduction
 
         </Typography>
+        <About/>
         </div>
       </div>
       <div ref={timelineref} style={{  backgroundColor: '#050A30' }}>

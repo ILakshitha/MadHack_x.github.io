@@ -4,14 +4,14 @@ import { CardContent, Typography } from '@mui/material';
 import { Card } from '@mui/material';
 
 const events = [
-  { date: "Jan 6th", title: "Awareness Session", location: "Virtual" },
-  { date: "Jan 10th", title: "Mobile App Designing Session", location: "Virtual" },
-  { date: "Feb 4th", title: "Workshop - Flutter Session - Basics", location: "Virtual" },
-  { date: "Feb 18th", title: "Workshop - Flutter Session - Advanced", location: "Virtual" },
-  { date: "March 4th", title: "Open Initial Round Submissions", location: "" },
-  { date: "March 16th", title: "Close Initial Round Submissions", location: "" },
-  { date: "Postponed", title: "Announcement of Finalists", location: "Virtual" },
-  { date: "Postponed", title: "Final Hackathon", location: "Onsite" },
+  { date: "octomber 6th", title: "Awareness Session", location: "Virtual" },
+  { date: "octomber 10th", title: "Mobile App Designing Session", location: "Virtual" },
+  { date: "octomber 4th", title: "Workshop - Flutter Session - Basics", location: "Virtual" },
+  { date: "octomber 18th", title: "Workshop - Flutter Session - Advanced", location: "Virtual" },
+  { date: "octomber 4th", title: "Open Initial Round Submissions", location: "" },
+  { date: "octomber 16th", title: "Close Initial Round Submissions", location: "" },
+  { date: "ctomber 27th", title: "Announcement of Finalists", location: "Virtual" },
+  { date: "ctomber 29th", title: "Final Hackathon", location: "Onsite" },
 ];
 
 const MadeHackTimeline = () => {
