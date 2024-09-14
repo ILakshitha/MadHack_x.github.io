@@ -1,15 +1,17 @@
 import React from 'react';
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import mac from '../assets/mcdonalds-logo.webp';
-import apple from '../assets/download.png';
-import lou from '../assets/Louis-Vuitton-Logo+2021.jpg';
+import ifs from '../assets/ifs.png';
+import wso2 from '../assets/wso2-logo.png';
+import hck from '../assets/hck.jpg';
+import crev from '../assets/crev.png';
+import paj from '../assets/pajero.png'
 
 export default function Carou() {
     const responsive = {
         desktop: {
             breakpoint: { max: 3000, min: 1024 },
-            items: 6,
+            items: 4,
             slidesToSlide: 1
         },
         tablet: {
@@ -51,6 +53,7 @@ export default function Carou() {
         >
             <div
                 style={{
+                    height:'200px',
                     width: '80%',            // Adjust this to control carousel width
                     maxWidth: '1200px',      // Ensure it doesn’t stretch too wide
                 }}
@@ -70,9 +73,11 @@ export default function Carou() {
                     dotListClass="custom-dot-list-style"
                     itemClass="carousel-item-padding-40-px"
                 >
-                    <Carousel1 logo={mac} />
-                    <Carousel1 logo={apple} />
-                    <Carousel1 logo={lou} />
+                    <Carousel1 logo={ifs} />
+                    <Carousel1 logo={wso2} />
+                    <Carousel1 logo={hck} />
+                    <Carousel1 logo={crev} />
+                    <Carousel1 logo={paj} />
                 </Carousel>
             </div>
         </div>
