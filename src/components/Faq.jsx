@@ -125,12 +125,12 @@ export default function Faq() {
                     aria-controls="panel2-content"
                     id="panel2-header"
                 >
-                    <Typography>Who can participate in MadHack 3.0?</Typography>
+                    <Typography>What if I'm a beginner in coding? Can I still participate?</Typography>
                 </AccordionSummary>
                 <AccordionDetails>
                     <Typography>
-                        MadHack 3.0 is open to all undergraduate students! Whether you're a seasoned developer or just starting,
-                        we welcome participants of all skill levels and backgrounds.
+                    Absolutely! MadHack 3.0 is designed for participants of all skill levels. It's a great opportunity for beginners 
+                    to learn and for experienced coders to showcase their expertise.
                     </Typography>
                 </AccordionDetails>
             </Accordion>
