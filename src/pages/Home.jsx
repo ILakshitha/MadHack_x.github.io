@@ -7,6 +7,8 @@ import { Box, Typography } from '@mui/material';
 import Timeline from '../components/TimeLine';
 import MadeHackTimeline from '../components/TimeLine';
 import About from '../components/About';
+import Prizecard from '../components/Prizecard';
+import bg from '../assets/bg.jpg'
 
 export default function Home() {
   const homeref = useRef(null);
@@ -38,66 +40,96 @@ export default function Home() {
   };
 
   return (
-    <div style={{  }}>
-      <Header scrollToSection={scrollToSection} />
-      <section ref={homeref} style={{ height: '840px', backgroundColor: '#050A30', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+    <>
+      <div style={{}}>
+        <Header scrollToSection={scrollToSection} />
 
-        <div style={{
-         display:'flex',
-         alignItems:'center'
-        }}>
-         
-          <Box
-            sx={{
+        <div>
 
-              width: 600,
-              height: 600,
-              borderRadius: 100,
-              bgcolor: '#0f1e64',
-              backgroundImage: `url(${madhack})`, // Add your image URL here
-              backgroundSize: '500px', // Ensures the image covers the entire box
-              backgroundPosition: 'center',
-              backgroundRepeat: 'no-repeat',
-              '&:hover': {
-                bgcolor: '#191970',
-              },
-            }}
-          />
-          
 
-        </div>
-        
-      </section>
-      <div ref={aboutref} style={{ height: '840px', backgroundColor: '#050A30' }}>
-      <div  style={{width:'full', textAlign: 'center'}}>
-        <Typography color='white'
-         sx={{ 
-          fontSize: '60px',    // Set font size
-          fontFamily: 'Times new roman'  // Set font family
-        }}
-        >
-          Intrduction
+          <section ref={homeref} style={{ height: '850px', backgroundColor: '#050A30', display: 'flex', justifyContent: 'center', alignItems: 'center',
+            backgroundVideo:`url(${bg})`
+           }}>
 
-        </Typography>
-        <About/>
+            <div style={{
+              display: 'flex',
+              alignItems: 'center'
+            }}>
+
+              <Box
+                sx={{
+
+                  width: 600,
+                  height: 600,
+                  borderRadius: 100,
+                  bgcolor: '#0f1e64',
+                  backgroundImage: `url(${madhack})`, // Add your image URL here
+                  backgroundSize: '500px', // Ensures the image covers the entire box
+                  backgroundPosition: 'center',
+                  backgroundRepeat: 'no-repeat',
+                  '&:hover': {
+                    bgcolor: '#191970',
+                  },
+                }}
+              />
+
+
+            </div>
+
+          </section>
+          <div ref={aboutref} style={{ height: '840px', backgroundColor: '#050A30', paddingTop:'100px' }}>
+            <div style={{ width: 'full', textAlign: 'center' }}>
+              <Typography color='white'
+                sx={{
+                  fontSize: '60px',    // Set font size
+                  fontFamily: 'Times new roman'  // Set font family
+                }}
+              >
+                Intrduction
+
+              </Typography>
+              <About />
+            </div>
+          </div>
+          <div ref={timelineref} style={{ backgroundColor: '#050A30', padding: '20px', margin: '0',paddingTop:'100px'  }}>
+            <div style={{ width: 'full', textAlign: 'center' }}>
+              <Typography color='white'
+                sx={{
+                  fontSize: '50px',    // Set font size
+                  fontFamily: 'Times new roman'  // Set font family
+                }}
+              >
+                Timeline
+
+              </Typography>
+            </div>
+            <div>
+              <MadeHackTimeline />
+            </div>
+          </div> {/* Added missing timeline section */}
+          <div ref={prizeref} style={{ backgroundColor: '#050A30', paddingTop:'100px',textAlign: 'center'  }}>
+          <Typography color='white'
+                sx={{
+                  fontSize: '60px',    // Set font size
+                  fontFamily: 'Times new roman'  // Set font family
+                }}
+              >
+                prizes
+
+              </Typography>
+            <Prizecard />
+            <div style={{ backgroundColor: 'white' }}>
+
+
+              <h2 style={{ fontFamily: 'monospace' }}>Our Partnerss</h2>
+              <Carou />
+
+            </div>
+
+          </div>
+          <div ref={faqref} style={{ height: '840px', backgroundColor: '#050A30', paddingTop:'100px'  }}>FAQ Section</div>
         </div>
       </div>
-      <div ref={timelineref} style={{  backgroundColor: '#050A30' }}>
-        <div  style={{width:'full', textAlign: 'center'}}>
-        <Typography color='white'
-         sx={{ 
-          fontSize: '50px',    // Set font size
-          fontFamily: 'Times new roman'  // Set font family
-        }}
-        >
-          Timeline
-
-        </Typography>
-        </div>
-        
-      <MadeHackTimeline/>  </div> {/* Added missing timeline section */}
-      <div ref={prizeref} style={{ height: '840px', backgroundColor: '#050A30' }}>Prizes Section</div>
-      <div ref={faqref} style={{ height: '840px', backgroundColor: '#050A30' }}>FAQ Section</div>
-    </div>
+    </>
   );
 }
