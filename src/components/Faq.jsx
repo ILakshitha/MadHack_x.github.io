@@ -80,8 +80,8 @@ export default function Faq() {
                 </AccordionSummary>
                 <AccordionDetails>
                     <Typography>
-                    To register, visit our website and navigate to the registration page. Fill in 
-                    the required details for yourself and your team members (if applicable) to secure your spot.
+                        To register, visit our website and navigate to the registration page. Fill in
+                        the required details for yourself and your team members (if applicable) to secure your spot.
                     </Typography>
                 </AccordionDetails>
             </Accordion>
@@ -108,12 +108,13 @@ export default function Faq() {
                     aria-controls="panel2-content"
                     id="panel2-header"
                 >
-                    <Typography>Who can participate in MadHack 3.0?</Typography>
+                    <Typography>Do I need a team to participate?</Typography>
                 </AccordionSummary>
                 <AccordionDetails>
                     <Typography>
-                        MadHack 3.0 is open to all undergraduate students! Whether you're a seasoned developer or just starting,
-                        we welcome participants of all skill levels and backgrounds.
+
+                        Yes, for the Initial Round and the Final Hackathon, participants
+                        are required to form teams of three or four members each.
                     </Typography>
                 </AccordionDetails>
             </Accordion>
