@@ -146,7 +146,7 @@ export default function Home() {
             </div>
 
           </div>
-          <div ref={faqref} style={{ height: '840px', backgroundColor: '#050A30', paddingTop: '100px' }}>
+          <div ref={faqref} style={{ height: 'auto', backgroundColor: '#050A30', paddingTop: '100px' }}>
           <div style={{ width: 'full', textAlign: 'center' }}>
               <Typography color='white'
                 sx={{
