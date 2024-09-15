@@ -8,7 +8,8 @@ import Timeline from '../components/TimeLine';
 import MadeHackTimeline from '../components/TimeLine';
 import About from '../components/About';
 import Prizecard from '../components/Prizecard';
-import bg from '../assets/bg.jpg'
+import bg from '../assets/bg-v.mp4'
+import Faq from '../components/Faq';
 
 export default function Home() {
   const homeref = useRef(null);
@@ -47,9 +48,27 @@ export default function Home() {
         <div>
 
 
-          <section ref={homeref} style={{ height: '850px', backgroundColor: '#050A30', display: 'flex', justifyContent: 'center', alignItems: 'center',
-            backgroundVideo:`url(${bg})`
-           }}>
+          <section ref={homeref} style={{
+            height: '850px', display: 'flex', justifyContent: 'center', alignItems: 'center',
+          }}>
+            <video
+              autoPlay
+              muted
+
+              style={{
+                position: 'absolute',
+                top: 0,
+                left: 0,
+                width: '100%',
+                height: '100%',
+                opacity: '3',
+                objectFit: 'cover',
+                zIndex: '-1',  // Ensures video stays behind the content
+              }}
+            >
+              <source src={bg} type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
 
             <div style={{
               display: 'flex',
@@ -77,7 +96,7 @@ export default function Home() {
             </div>
 
           </section>
-          <div ref={aboutref} style={{ height: '840px', backgroundColor: '#050A30', paddingTop:'100px' }}>
+          <div ref={aboutref} style={{ height: '840px', backgroundColor: '#050A30', position: '', paddingTop: '100px' }}>
             <div style={{ width: 'full', textAlign: 'center' }}>
               <Typography color='white'
                 sx={{
@@ -91,7 +110,7 @@ export default function Home() {
               <About />
             </div>
           </div>
-          <div ref={timelineref} style={{ backgroundColor: '#050A30', padding: '20px', margin: '0',paddingTop:'100px'  }}>
+          <div ref={timelineref} style={{ backgroundColor: '#050A30', padding: '20px', margin: '0', paddingTop: '100px' }}>
             <div style={{ width: 'full', textAlign: 'center' }}>
               <Typography color='white'
                 sx={{
@@ -107,16 +126,16 @@ export default function Home() {
               <MadeHackTimeline />
             </div>
           </div> {/* Added missing timeline section */}
-          <div ref={prizeref} style={{ backgroundColor: '#050A30', paddingTop:'100px',textAlign: 'center'  }}>
-          <Typography color='white'
-                sx={{
-                  fontSize: '60px',    // Set font size
-                  fontFamily: 'Times new roman'  // Set font family
-                }}
-              >
-                prizes
+          <div ref={prizeref} style={{ backgroundColor: '#050A30', paddingTop: '100px', textAlign: 'center' }}>
+            <Typography color='white'
+              sx={{
+                fontSize: '60px',    // Set font size
+                fontFamily: 'Times new roman'  // Set font family
+              }}
+            >
+              prizes
 
-              </Typography>
+            </Typography>
             <Prizecard />
             <div style={{ backgroundColor: 'white' }}>
 
@@ -127,7 +146,32 @@ export default function Home() {
             </div>
 
           </div>
-          <div ref={faqref} style={{ height: '840px', backgroundColor: '#050A30', paddingTop:'100px'  }}>FAQ Section</div>
+          <div ref={faqref} style={{ height: '840px', backgroundColor: '#050A30', paddingTop: '100px' }}>
+          <div style={{ width: 'full', textAlign: 'center' }}>
+              <Typography color='white'
+                sx={{
+                  fontSize: '50px',    // Set font size
+                  fontFamily: 'Times new roman'  // Set font family
+                }}
+              >
+                FAQ
+
+              </Typography>
+            </div>
+
+            <div style={{
+              display: 'flex',          // Enables Flexbox
+              justifyContent: 'center', // Centers horizontally
+              alignItems: 'center',     // Centers vertically
+              height: 'auto',          // Keeps the div size the same
+              width: '800px',
+              margin: '0 auto'          // Ensures the div is centered within the parent container
+            }}>
+              <Faq />
+            </div>
+
+
+          </div>
         </div>
       </div>
     </>
