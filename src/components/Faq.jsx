@@ -135,6 +135,24 @@ export default function Faq() {
                 </AccordionDetails>
             </Accordion>
 
+            <Accordion>
+                <AccordionSummary
+                    expandIcon={<ExpandMoreIcon />}
+                    aria-controls="panel2-content"
+                    id="panel2-header"
+                >
+                    <Typography>Is the usage of Flutter mandatory for MadHack 3.0 projects?</Typography>
+                </AccordionSummary>
+                <AccordionDetails>
+                    <Typography>
+                    No, it's not mandatory to use Flutter for your projects in MadHack 3.0. While we have Flutter sessions to help you, you are free to use other frameworks 
+                    or technologies that best suit your project requirements.
+                    </Typography>
+                </AccordionDetails>
+            </Accordion>
+
+            
+
 
         </div>
     );
