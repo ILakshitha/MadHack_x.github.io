@@ -40,7 +40,7 @@ export default function Home() {
 
   return (
     <>
-      <div style={{width:''}}>
+      <div>
         <Header scrollToSection={scrollToSection} />
 
         <div>
@@ -125,7 +125,7 @@ export default function Home() {
             <div style={{ backgroundColor: 'white' }}>
 
 
-              <h2 style={{ fontFamily: 'monospace',fontSize:'40px' }}>Our Partnerss</h2>
+              <h2 style={{ fontFamily: 'times new roman',fontSize:'40px' }}>Our Partners</h2>
               <Carou />
 
             </div>
