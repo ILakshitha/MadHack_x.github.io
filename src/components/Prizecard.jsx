@@ -8,7 +8,7 @@ import trofy from '../assets/tropy.png';
 const StyledCard = styled(Card)(({ theme }) => ({
   margin: '40px',
   maxWidth: 345,
-  background: 'radial-gradient(circle, #D2E4F1 0%, #003285 70%)',
+  background: 'radial-gradient(circle, #171717 0%, #000000 100%)',
  // backgroundColor: 'red', // Dark background similar to your image
   color: '#fff', // White text color
   textAlign: 'center',
@@ -44,7 +44,7 @@ export default function Prizecard() {
 
         </CardContent>
       </StyledCard>
-      <StyledCard>
+      <StyledCard sx={{}}>
         <Box >
           {/* The image on top of the card */}
           <StyledImage src={trofy} alt="Trophy Image" sx={{

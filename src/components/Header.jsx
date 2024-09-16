@@ -19,7 +19,7 @@ export default function Header({ scrollToSection }) {
 
   return (
     <div>
-      <AppBar position="fixed" sx={{ backgroundColor: '#030b5e' }}>
+      <AppBar position="fixed" sx={{ backgroundColor: '#000000' }}>
         <Container maxWidth="xl">
           <Toolbar disableGutters>
             <img src={madhack} alt='madhack' style={{ width: '200px', height: '100px' }} />

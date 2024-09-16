@@ -2,13 +2,10 @@ import React, { useRef } from 'react';
 import Carou from '../components/Carou';
 import Header from '../components/Header';
 import madhack from '../assets/Madhacklogo.svg';
-
 import { Box, Typography } from '@mui/material';
-import Timeline from '../components/TimeLine';
 import MadeHackTimeline from '../components/TimeLine';
 import About from '../components/About';
 import Prizecard from '../components/Prizecard';
-import bg from '../assets/bg-v.mp4'
 import Faq from '../components/Faq';
 
 export default function Home() {
@@ -49,26 +46,9 @@ export default function Home() {
 
 
           <section ref={homeref} style={{
-            height: '850px', display: 'flex', justifyContent: 'center', alignItems: 'center',
+            height: '850px', display: 'flex', justifyContent: 'center', alignItems: 'center',background: 'linear-gradient(To bottom, #000000 0%, #050A30 100%)',
           }}>
-            <video
-              autoPlay
-              muted
-
-              style={{
-                position: 'absolute',
-                top: 0,
-                left: 0,
-                width: '100%',
-                height: '100%',
-                opacity: '3',
-                objectFit: 'cover',
-                zIndex: '-1',  // Ensures video stays behind the content
-              }}
-            >
-              <source src={bg} type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
+            
 
             <div style={{
               display: 'flex',
@@ -78,16 +58,20 @@ export default function Home() {
               <Box
                 sx={{
 
-                  width: 600,
-                  height: 600,
+                  width: 900,
+                  height: 900,
                   borderRadius: 100,
-                  bgcolor: '#0f1e64',
+                  //bgcolor: '#0f1e64',
                   backgroundImage: `url(${madhack})`, // Add your image URL here
                   backgroundSize: '500px', // Ensures the image covers the entire box
                   backgroundPosition: 'center',
                   backgroundRepeat: 'no-repeat',
+                  opacity:'0.8',
+                  transition: 'background-size 0.5s ease, opacity 0.5s ease',
                   '&:hover': {
-                    bgcolor: '#191970',
+                    bgcolor: '',
+                    backgroundSize: '600px',
+                    opacity:'0.5'
                   },
                 }}
               />
@@ -165,7 +149,8 @@ export default function Home() {
               alignItems: 'center',     // Centers vertically
               height: 'auto',          // Keeps the div size the same
               width: '800px',
-              margin: '0 auto'          // Ensures the div is centered within the parent container
+              margin: '0 auto',
+              paddingBottom:'300px'         // Ensures the div is centered within the parent container
             }}>
               <Faq />
             </div>
