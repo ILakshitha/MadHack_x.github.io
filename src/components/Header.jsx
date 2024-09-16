@@ -34,11 +34,16 @@ export default function Header({ scrollToSection }) {
                 <Button
                   key={page}
                   onClick={() => handleNav(page)}
-                  sx={{ my: 2, color: 'white', display: 'block' }}
+                  sx={{
+                    my: 2,
+                    color: 'white',
+                    display: 'block',
+                    borderBottom: isActive === page ? '2px solid white' : 'none', // underline active page
+                    borderRadius: 0, // remove border radius to make the underline full width
+                  }}
                 >
                   {page}
                 </Button>
-                
               ))}
             </Box>
             

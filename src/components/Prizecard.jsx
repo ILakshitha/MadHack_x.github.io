@@ -7,8 +7,8 @@ import trofy from '../assets/tropy.png';
 // Custom styles for the card
 const StyledCard = styled(Card)(({ theme }) => ({
   margin: '40px',
-  maxWidth: 345,
-  background: 'radial-gradient(circle, #171717 0%, #000000 100%)',
+  maxWidth: 400,
+  background: 'linear-gradient(To bottom, #FFFFFF 0%, #050A30 60%)',
  // backgroundColor: 'red', // Dark background similar to your image
   color: '#fff', // White text color
   textAlign: 'center',
@@ -53,11 +53,11 @@ export default function Prizecard() {
         </Box>
         <CardContent>
 
-          <Typography variant="h6" color="">
+          <Typography fontFamily={{}} variant="h5" color="">
             Rs.100 000
           </Typography>
 
-          <Typography variant="h5" component="div" gutterBottom>
+          <Typography variant="h4" component="div" gutterBottom>
             1<sup>st</sup> Place
           </Typography>
 

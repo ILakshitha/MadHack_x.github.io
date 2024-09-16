@@ -7,6 +7,7 @@ import MadeHackTimeline from '../components/TimeLine';
 import About from '../components/About';
 import Prizecard from '../components/Prizecard';
 import Faq from '../components/Faq';
+import Footer from '../components/Footer';
 
 export default function Home() {
   const homeref = useRef(null);
@@ -39,7 +40,7 @@ export default function Home() {
 
   return (
     <>
-      <div style={{}}>
+      <div style={{width:''}}>
         <Header scrollToSection={scrollToSection} />
 
         <div>
@@ -124,7 +125,7 @@ export default function Home() {
             <div style={{ backgroundColor: 'white' }}>
 
 
-              <h2 style={{ fontFamily: 'monospace' }}>Our Partnerss</h2>
+              <h2 style={{ fontFamily: 'monospace',fontSize:'40px' }}>Our Partnerss</h2>
               <Carou />
 
             </div>
@@ -158,6 +159,7 @@ export default function Home() {
 
           </div>
         </div>
+        <Footer/>
       </div>
     </>
   );
